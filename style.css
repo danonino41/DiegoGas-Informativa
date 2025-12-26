@@ -1,26 +1,27 @@
 html,
 body {
-    height: 100%;
-    margin: 0;
+  height: 100%;
+  margin: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 footer {
-    margin-top: auto;
+  margin-top: auto;
 }
 
 /* ===== NAVBAR DIEGOGAS ===== */
 .navbar-diegogas {
-  background-color: #0056A4; /* color principal */
+  background-color: #0056A4;
+  /* color principal */
 }
 
 /* LOGO (SVG o texto) */
@@ -43,7 +44,8 @@ footer {
 /* HOVER DE LINKS */
 .navbar-diegogas .nav-link:hover,
 .navbar-diegogas .nav-link:focus {
-  color: #ffcc00; /* color de acento */
+  color: #ffcc00;
+  /* color de acento */
 }
 
 /* LINK ACTIVO */
@@ -75,11 +77,74 @@ footer {
   filter: invert(1);
 }
 
-.carousel-diegogas{
-  max-height: 1400px;
-  max-width: 1500px;
+
+/* Carrusel */
+.carousel-diegogas {
+  position: relative;
+  height: 95vh;
 }
 
+.carousel-diegogas .carousel-inner,
+.carousel-diegogas .carousel-item {
+  height: 100%;
+}
+
+.carousel-diegogas img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.carousel-overlay {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-left: 8%;
+  color: #fff;
+
+  background: rgba(0, 0, 0, 0.35);
+  /* oscurece la imagen */
+}
+
+.carousel-overlay h3 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.carousel-buttons a {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .carousel-diegogas {
+    height: 55vh;
+  }
+
+  .carousel-overlay {
+    align-items: center;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .carousel-overlay h3 {
+    font-size: 1.5rem;
+    padding: 0 15px;
+  }
+}
 
 /* Seccion 2 /Por qué elegirnos/ */
 .porque-elegirnos {
@@ -90,7 +155,7 @@ footer {
 }
 
 .porque-elegirnos h3 {
-  font-size : 28px;
+  font-size: 28px;
   font-weight: 800;
   margin-bottom: 30px;
 }
@@ -121,4 +186,11 @@ footer {
   font-weight: 400;
   font-size: 14px;
   opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .carousel-item .item {
+    margin: auto;
+    max-width: 220px;
+  }
 }

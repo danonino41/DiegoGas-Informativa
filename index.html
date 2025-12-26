@@ -10,6 +10,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        .diego-logo {
+            font-family: 'Lobster', cursive;
+            font-size: 2.8rem; /* Tamaño ajustado para navbar */
+            line-height: 1;
+            text-decoration: none;
+            position: relative; /* Necesario para posicionar la capa superior */
+            padding-bottom: 5px;
+            
+            /* --- CAPA BASE: EL BORDE MARRÓN --- */
+            /* Definimos el color del texto base igual al borde para evitar huecos */
+            color: #6b3523; 
+            /* El borde grueso marrón */
+            -webkit-text-stroke: 6px #6b3523;
+            paint-order: stroke fill; /* Asegura que el borde se dibuje detrás */
+            
+            /* Sombra exterior para darle "cuerpo" de pegatina */
+             filter: drop-shadow(3px 3px 1px rgba(0,0,0,0.3));
+        }
+    </style>
 </head>
 
 <body>
@@ -17,8 +38,7 @@
         <nav class="navbar navbar-expand-lg navbar-diegogas">
             <div class="container-fluid">
                 <!-- LOGO A LA IZQUIERDA -->
-                <a class="navbar-brand" href="#">DiegoGasLOGO</a>
-
+                <a class="navbar-brand diego-logo" href="#">Diego Gas</a>
                 <!-- BOTÓN HAMBURGUESA -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -71,18 +91,31 @@
 
     <main>
         <section>
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-touch="false">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-diegogas" data-bs-touch="false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="img/imagen1.png" class="d-block w-100" alt="...">
+                        <img src="img/imagen1.png" class="d-block w-100">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/imagen2.png" class="d-block w-100" alt="...">
+                        <img src="img/imagen2.png" class="d-block w-100">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/imagen3.jpg" class="d-block w-100" alt="...">
+                        <img src="img/imagen3.png" class="d-block w-100">
                     </div>
                 </div>
+
+                <div class="carousel-overlay">
+                    <h3>
+                        Distribuidora de gas a domicilio rápida, <br>
+                        segura y confiable
+                    </h3>
+
+                    <div class="carousel-buttons">
+                        <a href="#nosotros" class="btn btn-success">Sobre Nosotros</a>
+                        <a href="#productos" class="btn btn-outline-light">Ver productos</a>
+                    </div>
+                </div>
+
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -96,7 +129,7 @@
             </div>
         </section>
         <section>
-            <div class="porque-elegirnos">
+            <div class="porque-elegirnos d-none d-md-block">
                 <h3>¿Por qué elegirnos?</h3>
 
                 <div class="puntos">
@@ -124,6 +157,60 @@
                         <i class="bi bi-headset"></i>
                         <p>Atención inmediata<br><span>respuesta al instante</span></p>
                     </div>
+                </div>
+            </div>
+            <div class="porque-elegirnos d-md-none">
+                <h3>¿Por qué elegirnos?</h3>
+
+                <div id="porqueElegirnosCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="item">
+                                <i class="bi bi-stopwatch-fill"></i>
+                                <p>Entrega rápida<br><span>menos de 5 minutos</span></p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="item">
+                                <i class="bi bi-shield-check"></i>
+                                <p>Servicio seguro<br><span>personal capacitado</span></p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="item">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <p>Amplia cobertura<br><span>más de 5 distritos</span></p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="item">
+                                <i class="bi bi-award-fill"></i>
+                                <p>Experiencia<br><span>10+ años</span></p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="item">
+                                <i class="bi bi-headset"></i>
+                                <p>Atención inmediata<br><span>respuesta al instante</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#porqueElegirnosCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#porqueElegirnosCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
                 </div>
             </div>
         </section>
