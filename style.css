@@ -1,0 +1,124 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* ===== NAVBAR DIEGOGAS ===== */
+.navbar-diegogas {
+  background-color: #0056A4; /* color principal */
+}
+
+/* LOGO (SVG o texto) */
+.navbar-diegogas .navbar-brand {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.navbar-diegogas .navbar-brand:hover {
+  color: #e5e7eb;
+}
+
+/* LINKS DEL MENÚ */
+.navbar-diegogas .nav-link {
+  color: #e5e7eb;
+  font-weight: 500;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* HOVER DE LINKS */
+.navbar-diegogas .nav-link:hover,
+.navbar-diegogas .nav-link:focus {
+  color: #ffcc00; /* color de acento */
+}
+
+/* LINK ACTIVO */
+.navbar-diegogas .nav-link.active {
+  color: #38bdf8;
+}
+
+/* BOTÓN CTA */
+.navbar-diegogas .btn-cta {
+  background-color: #ffffff;
+  color: #0056A4;
+  font-weight: 600;
+  border: none;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+}
+
+.navbar-diegogas .btn-cta:hover {
+  background-color: #e6eef6;
+  color: #003b73;
+}
+
+/* ICONO HAMBURGUESA (IMPORTANTE) */
+.navbar-diegogas .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-diegogas .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.carousel-diegogas{
+  max-height: 1400px;
+  max-width: 1500px;
+}
+
+
+/* Seccion 2 /Por qué elegirnos/ */
+.porque-elegirnos {
+  background-color: #0056A4;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.porque-elegirnos h3 {
+  font-size : 28px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.porque-elegirnos .puntos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.porque-elegirnos .item {
+  padding: 0 25px;
+}
+
+.porque-elegirnos .item i {
+  font-size: 55px;
+  color: #FFD700;
+}
+
+.porque-elegirnos .item p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.porque-elegirnos .item span {
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0.9;
+}
