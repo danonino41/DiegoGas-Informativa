@@ -12,32 +12,35 @@
     <link rel="stylesheet" href="/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
         .diego-logo {
             font-family: 'Lobster', cursive;
-            font-size: 2.8rem; /* Tamaño ajustado para navbar */
+            font-size: 2.8rem;
+            /* Tamaño ajustado para navbar */
             line-height: 1;
             text-decoration: none;
-            position: relative; /* Necesario para posicionar la capa superior */
+            position: relative;
+            /* Necesario para posicionar la capa superior */
             padding-bottom: 5px;
-            
+
             /* --- CAPA BASE: EL BORDE MARRÓN --- */
             /* Definimos el color del texto base igual al borde para evitar huecos */
-            color: #6b3523; 
+            color: #6b3523;
             /* El borde grueso marrón */
             -webkit-text-stroke: 6px #6b3523;
-            paint-order: stroke fill; /* Asegura que el borde se dibuje detrás */
-            
+            paint-order: stroke fill;
+            /* Asegura que el borde se dibuje detrás */
+
             /* Sombra exterior para darle "cuerpo" de pegatina */
-             filter: drop-shadow(3px 3px 1px rgba(0,0,0,0.3));
+            filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.3));
         }
     </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-diegogas">
-            <div class="container-fluid">
-                <!-- LOGO A LA IZQUIERDA -->
+        <nav class="navbar navbar-expand-lg navbar-diegogas fixed-top">
+            <div class="container-fluid">   
                 <a class="navbar-brand diego-logo" href="#">Diego Gas</a>
                 <!-- BOTÓN HAMBURGUESA -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -46,12 +49,11 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- TODO LO DEMÁS A LA DERECHA -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                     <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre Nosotros</a>
+                            <a class="nav-link" href="#nosotros">Sobre Nosotros</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Nuestro Equipo</a>
@@ -70,25 +72,20 @@
                                 <li><a class="dropdown-item" href="#">Accesorios</a></li>
                             </ul>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" href="#">Servicios Técnicos</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" href="#">Preguntas Frecuentes</a>
                         </li>
                     </ul>
-
                     <form class="d-flex ms-3" role="search">
                         <button class="btn btn-outline-success" type="submit">Llama Ya!</button>
                     </form>
-
                 </div>
             </div>
         </nav>
     </header>
-
     <main>
         <section>
             <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-diegogas" data-bs-touch="false">
@@ -214,6 +211,24 @@
                 </div>
             </div>
         </section>
+
+        <section class="nosotros" id="nosotros">
+            <div class="nosotros-container">
+                <img src="img/imagenNosotros.png" alt="Distribución de gas a domicilio">
+                <div class="contenido2">
+                    <h2>Distribución de balones de gas</h2>
+                    <p>En “Diego Gas”, todo empezó con una idea clara: llevar energía segura y confiable a cada hogar.
+                        Desde nuestros primeros pasos en Independencia, Lima, hemos crecido junto a nuestra comunidad,
+                        ofreciendo más que solo gas—ofrecemos confianza, atención personalizada y soluciones para tu
+                        cocina y tu día a día.
+                        Hoy, seguimos encendidos por el mismo compromiso que nos impulsó desde el inicio.</p>
+                    <p>👉<strong><a href="">[Saber más]</a></strong> Descubre nuestra historia completa, visión y
+                        misión, principios y valores, política
+                        de calidad y el compromiso que nos mueve.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
 

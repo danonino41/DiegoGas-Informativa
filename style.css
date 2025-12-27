@@ -5,8 +5,7 @@ body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  margin-top: 35px;
   min-height: 100vh;
 }
 
@@ -21,7 +20,6 @@ footer {
 /* ===== NAVBAR DIEGOGAS ===== */
 .navbar-diegogas {
   background-color: #0056A4;
-  /* color principal */
 }
 
 /* LOGO (SVG o texto) */
@@ -76,7 +74,6 @@ footer {
 .navbar-diegogas .navbar-toggler-icon {
   filter: invert(1);
 }
-
 
 /* Carrusel */
 .carousel-diegogas {
@@ -192,5 +189,59 @@ footer {
   .carousel-item .item {
     margin: auto;
     max-width: 220px;
+  }
+}
+
+
+.nosotros-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nosotros-container img {
+  width: 50%;
+  height: 650px;
+  object-fit: cover;
+}
+
+.contenido2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+}
+
+.contenido2 h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.contenido2 p {
+  max-width: 650px;
+  font-size: 20px;
+}
+
+.contenido2 a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .nosotros-container {
+    flex-direction: column;
+  }
+
+  .nosotros-container img,
+  .contenido2 {
+    width: 100%;
+  }
+
+  .contenido2 h2 {
+    font-size: 32px;
+  }
+
+  .contenido2 p {
+    font-size: 15px;
   }
 }
