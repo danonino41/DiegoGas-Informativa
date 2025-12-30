@@ -5,7 +5,7 @@ body {
 }
 
 body {
-  margin-top: 35px;
+  background-color: rgb(246, 234, 221);
   min-height: 100vh;
 }
 
@@ -69,16 +69,117 @@ footer {
 /* ICONO HAMBURGUESA (IMPORTANTE) */
 .navbar-diegogas .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.3);
+  padding: 4px 8px;
 }
 
 .navbar-diegogas .navbar-toggler-icon {
   filter: invert(1);
+  transition: transform 0.3s ease-in-out;
+  width: 24px;
+  height: 24px;
+  background-image: none;
+  position: relative;
+}
+
+/* Ocultar línea del medio original */
+.navbar-diegogas .navbar-toggler-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Líneas superior e inferior */
+.navbar-diegogas .navbar-toggler-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  top: 6px;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.navbar-diegogas .navbar-toggler-icon span {
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  bottom: 6px;
+  transition: transform 0.3s ease-in-out, bottom 0.3s ease-in-out;
+}
+
+/* Animación a X cuando el menú está abierto */
+.navbar-diegogas .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  opacity: 0;
+}
+
+.navbar-diegogas .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  transform: rotate(45deg);
+  top: 11px;
+}
+
+.navbar-diegogas .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span {
+  transform: rotate(-45deg);
+  bottom: 11px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.navbar .navbar-brand.diego-logo {
+  font-family: 'Lobster', cursive;
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 1;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+
+  /* DEGRADADO */
+    background: linear-gradient(to bottom, #ffcc00, #ff6600);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* BORDE */
+  paint-order: stroke fill;
+
+  filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.3));
+}
+
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  .navbar-diegogas .navbar-brand.diego-logo {
+    font-size: 1.8rem;
+  }
+  
+  .navbar-diegogas .navbar-nav {
+    padding: 0 0;
+    text-align: center;
+  }
+  
+  .navbar-diegogas .dropdown-menu {
+    text-align: center;
+  }
+  
+  .navbar-diegogas form.d-flex {
+    justify-content: center;
+    margin-top: 10px;
+  }
 }
 
 /* Carrusel */
 .carousel-diegogas {
   position: relative;
-  height: 95vh;
+  height: 100vh;
 }
 
 .carousel-diegogas .carousel-inner,
@@ -112,7 +213,6 @@ footer {
   color: #fff;
 
   background: rgba(0, 0, 0, 0.35);
-  /* oscurece la imagen */
 }
 
 .carousel-overlay h3 {
@@ -124,22 +224,60 @@ footer {
 
 .carousel-buttons a {
   margin-right: 10px;
+
 }
 
 @media (max-width: 768px) {
   .carousel-diegogas {
-    height: 55vh;
+    height: 60vh;
   }
 
   .carousel-overlay {
     align-items: center;
     padding-left: 0;
     text-align: center;
+    background: rgba(0, 0, 0, 0.5);
   }
 
   .carousel-overlay h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+  }
+  
+  .carousel-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .carousel-buttons a {
+    margin-right: 0;
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-diegogas {
+    height: 53vh;
+  }
+
+  /* Opcional para centrar la info*/
+  .carousel-overlay{
+    padding-top: 38.8px;
+  }
+
+  .carousel-overlay h3 {
+    font-size: 1.1rem;
     padding: 0 15px;
+  }
+  
+  .carousel-buttons a {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    min-width: 120px;
   }
 }
 
@@ -188,7 +326,38 @@ footer {
 @media (max-width: 768px) {
   .carousel-item .item {
     margin: auto;
-    max-width: 220px;
+    max-width: 250px;
+  }
+  
+  .porque-elegirnos h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .porque-elegirnos {
+    padding: 15px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item .item {
+    max-width: 200px;
+  }
+  
+  .porque-elegirnos h3 {
+    font-size: 20px;
+  }
+  
+  .porque-elegirnos .item i {
+    font-size: 45px;
+  }
+  
+  .porque-elegirnos .item p {
+    font-size: 16px;
+  }
+  
+  .porque-elegirnos .item span {
+    font-size: 13px;
   }
 }
 
@@ -209,18 +378,18 @@ footer {
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 25px;
+  gap: 6px;
+  padding: 0 50px;
 }
 
 .contenido2 h2 {
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 700;
 }
 
 .contenido2 p {
   max-width: 650px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .contenido2 a:hover {
@@ -243,5 +412,45 @@ footer {
 
   .contenido2 p {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nosotros-container img {
+    height: 400px;
+  }
+  
+  .contenido2 {
+    padding: 20px;
+  } 
+
+  .contenido2 h2 {
+    font-size: 28px;
+    text-align: center;
+  } 
+    
+  .contenido2 p {
+    text-align: center;
+    font-size: 15px;
+    max-width: 100%;
+  }
+}  
+    
+@media (max-width: 480px) {
+  .nosotros-container img {
+    height: 250px;
+  }
+  
+  .contenido2 {
+    padding: 15px;
+  }
+  
+  .contenido2 h2 {
+    font-size: 24px;
+  }
+  
+  .contenido2 p {
+    font-size: 18px;
+    line-height: 1.5;
   }
 }

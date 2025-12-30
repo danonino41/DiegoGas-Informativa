@@ -5,48 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DiegoGas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="/style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
-        .diego-logo {
-            font-family: 'Lobster', cursive;
-            font-size: 2.8rem;
-            /* Tamaño ajustado para navbar */
-            line-height: 1;
-            text-decoration: none;
-            position: relative;
-            /* Necesario para posicionar la capa superior */
-            padding-bottom: 5px;
-
-            /* --- CAPA BASE: EL BORDE MARRÓN --- */
-            /* Definimos el color del texto base igual al borde para evitar huecos */
-            color: #6b3523;
-            /* El borde grueso marrón */
-            -webkit-text-stroke: 6px #6b3523;
-            paint-order: stroke fill;
-            /* Asegura que el borde se dibuje detrás */
-
-            /* Sombra exterior para darle "cuerpo" de pegatina */
-            filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.3));
-        }
-    </style>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.rtl.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-diegogas fixed-top">
-            <div class="container-fluid">   
+            <div class="container-fluid">
                 <a class="navbar-brand diego-logo" href="#">Diego Gas</a>
                 <!-- BOTÓN HAMBURGUESA -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon">
+                        <span></span>
+                    </span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -231,13 +209,7 @@
 
     </main>
 
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
