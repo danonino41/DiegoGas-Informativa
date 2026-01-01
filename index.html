@@ -14,11 +14,25 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-diegogas fixed-top">
+    <header class="fixed-top">
+        <div class="datos">
+            <div class="item-datos marquee-content"
+                style="display: flex; padding: 10px; justify-content: center; color: white; gap: 40px; white-space: nowrap;">
+                <p class="mb-0"><i class="bi bi-clock"></i> Atención de 6am a 10pm</p>
+                <p class="mb-0">|</p>
+                <p class="mb-0"><i class="bi bi-truck"></i> Delivery Rápido y Seguro</p>
+                <p class="mb-0">|</p>
+                <p class="mb-0"><i class="bi bi-whatsapp"></i> Pedidos al 924 484 038</p>
+                <p class="mb-0">|</p>
+                <p class="mb-0"><i class="bi bi-clock"></i> Atención de 6am a 10pm</p>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-diegogas shadow-sm">
             <div class="container-fluid">
+
                 <a class="navbar-brand diego-logo" href="#">Diego Gas</a>
-                <!-- BOTÓN HAMBURGUESA -->
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -34,32 +48,25 @@
                             <a class="nav-link" href="#nosotros">Sobre Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Nuestro Equipo</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Balones de Gas</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Accesorios</a></li>
-                            </ul>
+                            <a class="nav-link" href="#nuestro-equipo">Nuestro Equipo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Servicios Técnicos</a>
+                            <a class="nav-link" href="#nuestros-productos">Nuestros Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Preguntas Frecuentes</a>
+                            <a class="nav-link" href="#servicios-tecnicos">Servicios Técnicos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pregutnas-frecuentes">Preguntas Frecuentes</a>
                         </li>
                     </ul>
-                    <form class="d-flex ms-3" role="search">
-                        <button class="btn btn-outline-success" type="submit">Llama Ya!</button>
-                    </form>
+
+                    <div class="d-flex ms-3">
+                        <a href="tel:+51924484038"
+                            class="btn btn-success rounded-pill fw-bold d-flex align-items-center gap-2 px-4 shadow-sm btn-vibrar">
+                            <i class="bi bi-telephone-fill"></i> Llama Ya!
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -105,87 +112,98 @@
         </section>
         <section>
             <div class="porque-elegirnos d-none d-md-block">
-                <h3>¿Por qué elegirnos?</h3>
-
-                <div class="puntos">
-                    <div class="item">
-                        <i class="bi bi-stopwatch-fill"></i>
-                        <p>Entrega rápida<br><span>menos de 5 minutos</span></p>
+                <div class="container py-2">
+                    <div class="text-center mb-5">
+                        <h2 class="section-title">¿Por qué elegirnos?</h2>
+                        <div class="title-underline"></div>
                     </div>
 
-                    <div class="item">
-                        <i class="bi bi-shield-check"></i>
-                        <p>Servicio seguro<br><span>personal capacitado</span></p>
-                    </div>
 
-                    <div class="item">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <p>Amplia cobertura<br><span>más de 5 distritos</span></p>
-                    </div>
+                    <div class="puntos">
+                        <div class="item">
+                            <i class="bi bi-stopwatch-fill"></i>
+                            <p>Entrega rápida<br><span>menos de 5 minutos</span></p>
+                        </div>
 
-                    <div class="item">
-                        <i class="bi bi-award-fill"></i>
-                        <p>Experiencia<br><span>10+ años en el rubro</span></p>
-                    </div>
+                        <div class="item">
+                            <i class="bi bi-shield-check"></i>
+                            <p>Servicio seguro<br><span>personal capacitado</span></p>
+                        </div>
 
-                    <div class="item">
-                        <i class="bi bi-headset"></i>
-                        <p>Atención inmediata<br><span>respuesta al instante</span></p>
+                        <div class="item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <p>Amplia cobertura<br><span>más de 5 distritos</span></p>
+                        </div>
+
+                        <div class="item">
+                            <i class="bi bi-award-fill"></i>
+                            <p>Experiencia<br><span>10+ años en el rubro</span></p>
+                        </div>
+
+                        <div class="item">
+                            <i class="bi bi-headset"></i>
+                            <p>Atención inmediata<br><span>respuesta al instante</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="porque-elegirnos d-md-none">
-                <h3>¿Por qué elegirnos?</h3>
-
-                <div id="porqueElegirnosCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-
-                        <div class="carousel-item active">
-                            <div class="item">
-                                <i class="bi bi-stopwatch-fill"></i>
-                                <p>Entrega rápida<br><span>menos de 5 minutos</span></p>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="item">
-                                <i class="bi bi-shield-check"></i>
-                                <p>Servicio seguro<br><span>personal capacitado</span></p>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="item">
-                                <i class="bi bi-geo-alt-fill"></i>
-                                <p>Amplia cobertura<br><span>más de 5 distritos</span></p>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="item">
-                                <i class="bi bi-award-fill"></i>
-                                <p>Experiencia<br><span>10+ años</span></p>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="item">
-                                <i class="bi bi-headset"></i>
-                                <p>Atención inmediata<br><span>respuesta al instante</span></p>
-                            </div>
-                        </div>
-
+                <div class="container py-2">
+                    <div class="text-center mb-2">
+                        <h2 class="section-title">¿Por qué elegirnos?</h2>
+                        <div class="title-underline"></div>
                     </div>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#porqueElegirnosCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
+                    <div id="porqueElegirnosCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
 
-                    <button class="carousel-control-next" type="button" data-bs-target="#porqueElegirnosCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
+                            <div class="carousel-item active">
+                                <div class="item">
+                                    <i class="bi bi-stopwatch-fill"></i>
+                                    <p>Entrega rápida<br><span>menos de 5 minutos</span></p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="item">
+                                    <i class="bi bi-shield-check"></i>
+                                    <p>Servicio seguro<br><span>personal capacitado</span></p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="item">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <p>Amplia cobertura<br><span>más de 5 distritos</span></p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="item">
+                                    <i class="bi bi-award-fill"></i>
+                                    <p>Experiencia<br><span>10+ años</span></p>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="item">
+                                    <i class="bi bi-headset"></i>
+                                    <p>Atención inmediata<br><span>respuesta al instante</span></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#porqueElegirnosCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#porqueElegirnosCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -194,7 +212,8 @@
             <div class="nosotros-container">
                 <img src="img/imagenNosotros.png" alt="Distribución de gas a domicilio">
                 <div class="contenido2">
-                    <h2>Distribución de balones de gas</h2>
+                    <h2>¿Quiénes Somos?</h2>
+                    <div class="link-offset-1"></div>
                     <p>En “Diego Gas”, todo empezó con una idea clara: llevar energía segura y confiable a cada hogar.
                         Desde nuestros primeros pasos en Independencia, Lima, hemos crecido junto a nuestra comunidad,
                         ofreciendo más que solo gas—ofrecemos confianza, atención personalizada y soluciones para tu
@@ -262,11 +281,11 @@
                                 <div class="col-md-4 mb-4">
                                     <div class="team-card">
                                         <div class="img-wrapper">
-                                            <img src="https://i.pinimg.com/736x/a3/fc/1e/a3fc1e7d91926d07965c7d46e2175644.jpg"
-                                                alt="Angelo Cullanco">
+                                            <img src="https://i.pinimg.com/736x/7c/f3/4f/7cf34f4aec9076a37497bdbcd8ad89d5.jpg"
+                                                alt="Felix Pelon">
                                         </div>
                                         <div class="card-content">
-                                            <h4>Angelo Cullanco</h4>
+                                            <h4>Felix Pelon</h4>
                                             <span class="role">Motorizado</span>
                                         </div>
                                     </div>
@@ -274,11 +293,11 @@
                                 <div class="col-md-4 mb-4 d-none d-md-block">
                                     <div class="team-card">
                                         <div class="img-wrapper">
-                                            <img src="https://i.pinimg.com/1200x/38/54/00/3854000d6fdd66deef88f662d68015d9.jpg"
-                                                alt="Walter Cullanco">
+                                            <img src="https://i.pinimg.com/736x/07/7a/25/077a25f51c529c5e3f5351928307bfff.jpg"
+                                                alt="Changbin Papoi">
                                         </div>
                                         <div class="card-content">
-                                            <h4>Walter Cullanco</h4>
+                                            <h4>Changbin Papoi</h4>
                                             <span class="role">Motorizado</span>
                                         </div>
                                     </div>
@@ -286,11 +305,11 @@
                                 <div class="col-md-4 mb-4 d-none d-lg-block">
                                     <div class="team-card">
                                         <div class="img-wrapper">
-                                            <img src="https://www.shutterstock.com/image-photo/portrait-smiling-banker-crossed-arms-600nw-2561900345.jpg"
-                                                alt="Maycol Garcia">
+                                            <img src="https://i.pinimg.com/1200x/2a/0f/67/2a0f677af860684e8f8effd115963c1a.jpg"
+                                                alt="Han Arrecho">
                                         </div>
                                         <div class="card-content">
-                                            <h4>Maycol Garcia</h4>
+                                            <h4>Han Arrecho</h4>
                                             <span class="role">Motorizado</span>
                                         </div>
                                     </div>
@@ -314,6 +333,240 @@
             </div>
         </section>
 
+        <section class="nuestros-productos py-5 bg-light" id="nuestros-productos">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-dark">Nuestros Productos</h2>
+                    <div class="d-inline-block bg-primary rounded" style="width: 80px; height: 4px;"></div>
+                    <p class="text-muted mt-2">Calidad y peso exacto garantizado</p>
+                </div>
+
+                <h3 class="h4 mb-4 text-secondary border-start border-4 border-primary ps-2">Balones de Gas</h3>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mb-5">
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 hover-effect">
+                            <img src="https://gas-del-sur.com/wp-content/uploads/2023/04/b.jpg" class="card-img-top p-3"
+                                alt="Balón de 5 kilos">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title fw-bold">Balón 5kg</h5>
+                                <p class="card-text text-muted small">Ideal para espacios pequeños.</p>
+                                <button class="btn btn-outline-primary mt-auto rounded-pill">Ver detalle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 hover-effect">
+                            <img src="https://gas-del-sur.com/wp-content/uploads/2023/04/b.jpg" class="card-img-top p-3"
+                                alt="Balón de 10 kilos">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title fw-bold">Balón 10kg</h5>
+                                <p class="card-text text-muted small">El estándar para el hogar.</p>
+                                <button class="btn btn-outline-primary mt-auto rounded-pill">Ver detalle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 hover-effect">
+                            <img src="https://gas-del-sur.com/wp-content/uploads/2023/04/b.jpg" class="card-img-top p-3"
+                                alt="Balón de 15 kilos">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title fw-bold">Balón 15kg</h5>
+                                <p class="card-text text-muted small">Mayor duración para familias.</p>
+                                <button class="btn btn-outline-primary mt-auto rounded-pill">Ver detalle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 hover-effect">
+                            <img src="https://gas-del-sur.com/wp-content/uploads/2023/04/b.jpg" class="card-img-top p-3"
+                                alt="Balón de 45 kilos">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title fw-bold">Balón 45kg</h5>
+                                <p class="card-text text-muted small">Uso industrial o comercial.</p>
+                                <button class="btn btn-outline-primary mt-auto rounded-pill">Ver detalle</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="h4 mb-4 text-secondary border-start border-4 border-warning ps-2">Accesorios y Repuestos</h3>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-8">
+                        <div class="card shadow border-0 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-5">
+                                    <img src="https://tuvalrep.com.co/wp-content/uploads/2024/10/Gas-Pe-al-Pe-Banner-Amarillo.webp"
+                                        class="img-fluid h-100 w-100 object-fit-cover" alt="Accesorios de gas">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body p-4">
+                                        <h4 class="card-title fw-bold">Kit de Instalación Completo</h4>
+                                        <p class="card-text">Mangueras reforzadas, válvulas premium y abrazaderas de
+                                            alta seguridad. Todo lo que necesitas para una instalación segura.</p>
+                                        <a href="#" class="btn btn-warning text-dark fw-bold">Ver catálogo de
+                                            accesorios</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section>
+            <a href="https://wa.me/51924484038?text=Hola,%20quisiera%20más%20información%20sobre%20los%20productos"
+                class="btn-whatsapp" target="_blank" title="Escríbenos por WhatsApp">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                    class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path
+                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                </svg>
+            </a>
+
+            <style>
+                .btn-whatsapp {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    width: 60px;
+                    height: 60px;
+                    background-color: #25d366;
+                    /* Color oficial de WhatsApp */
+                    color: white;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                    z-index: 1000;
+                    /* Asegura que esté por encima de todo */
+                    transition: all 0.3s ease;
+                    text-decoration: none;
+                    /* Quita subrayado de enlace */
+                }
+
+                .btn-whatsapp:hover {
+                    background-color: #1ebe57;
+                    /* Un verde un poco más oscuro al pasar el mouse */
+                    transform: scale(1.1);
+                    /* Efecto de crecimiento */
+                    color: white;
+                    /* Mantiene el icono blanco */
+                    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+                }
+
+                /* Animación de pulso opcional para llamar la atención */
+                @keyframes pulse-green {
+                    0% {
+                        transform: scale(1);
+                        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+                    }
+
+                    70% {
+                        transform: scale(1.05);
+                        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+                    }
+                }
+
+                .btn-whatsapp {
+                    animation: pulse-green 2s infinite;
+                }
+            </style>
+        </section> -->
+        <section class="marcas py-5 text-white color-primario" id="marcas">
+            <div class="container">
+
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold display-6">Trabajamos con las mejores marcas</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div id="carruselMarcas" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+                    <div class="carousel-inner container px-4">
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center align-items-center g-4">
+
+                                <div class="col-6 col-md-3">
+                                    <div class="logo-box bg-white rounded shadow-sm p-3">
+                                        <img src="https://costagas.com.pe/wp-content/uploads/2023/05/logo-costa-gas.png"
+                                            class="img-fluid logo-hover" alt="Marca 1">
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-3">
+                                    <div class="logo-box bg-white rounded shadow-sm p-3">
+                                        <img src="https://solgaspro.solgas.com.pe:4443/canalizado/libs/images/logo_solgas.png"
+                                            class="img-fluid logo-hover" alt="Marca 2">
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-3">
+                                    <div class="logo-box bg-white rounded shadow-sm p-3">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaMmNWdB6pjW_H3bmEbDxb2kCfODJCTBoX3Q&s"
+                                            class="img-fluid logo-hover" alt="Marca 3">
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row justify-content-center align-items-center g-4">
+
+                                <div class="col-6 col-md-3">
+                                    <div class="logo-box bg-white rounded shadow-sm p-3">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF64O5PDLc8xXsnBm6H_v-wqV6qQ0SFKGc6Q&s"
+                                            class="img-fluid logo-hover" alt="Marca 5">
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-3">
+                                    <div class="logo-box bg-white rounded shadow-sm p-3">
+                                        <img src="https://cdn.worldvectorlogo.com/logos/zeta-gas.svg"
+                                            class="img-fluid logo-hover" alt="Marca 6">
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-3">
+                                    <div class="logo-box bg-white rounded shadow-sm p-3">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUni_rkfJ2FdE2mFHU0qa-OiOQ0TbkcYkh1A&s"
+                                            class="img-fluid logo-hover" alt="Marca 4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carruselMarcas"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carruselMarcas"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
     </main>
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
