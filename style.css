@@ -8,6 +8,10 @@ body {
   background-color: #004481;
 }
 
+.color-blanco{
+  color: white;
+}
+
 body {
   background-color: rgb(221, 220, 218);
   min-height: 100vh;
