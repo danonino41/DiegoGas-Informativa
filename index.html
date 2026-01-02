@@ -61,10 +61,13 @@
                     </ul>
 
                     <div class="d-flex ms-3">
-                        <a href="#contactanos"
-                            class="btn btn-success rounded-pill fw-bold d-flex align-items-center gap-2 px-4 shadow-sm btn-vibrar">
-                            <i class="bi bi-telephone-fill"></i> Llama Ya!
-                        </a>
+                        <li class="nav-item">
+                            <a href="#contactanos"
+                                class="btn btn-success rounded-pill fw-bold d-flex align-items-center gap-2 px-4 shadow-sm btn-vibrar">
+                                <i class="bi bi-telephone-fill"></i> Llama Ya!
+                            </a>
+                        </li>
+
                     </div>
                 </div>
             </div>
@@ -221,10 +224,10 @@
                     </div>
 
                     <div class="col-lg-6 contenido-nosotros">
-                        <span class="text-primary fw-bold text-uppercase ls-1 small">Nuestra Historia</span>
+                        <span class="fw-bold text-uppercase ls-1 small" style="color: #003b73;">Nuestra Historia</span>
 
                         <h2 class="fw-bold display-5 text-dark mt-2 mb-3">
-                            Llevando <span class="text-primary">energía segura</span> a cada hogar
+                            Llevando <span style="color: rgb(255, 183, 0);">energía segura</span> a cada hogar
                         </h2>
 
                         <div class="linea-azul mb-4"></div>
@@ -264,11 +267,11 @@
                                 <div class="col-md-4 mb-4">
                                     <div class="team-card">
                                         <div class="img-wrapper">
-                                            <img src="https://i.pinimg.com/736x/a3/fc/1e/a3fc1e7d91926d07965c7d46e2175644.jpg"
-                                                alt="Angelo Cullanco">
+                                            <img src="https://i.pinimg.com/736x/57/a6/31/57a631623dbb3e10a7e4b470fb5aeab3.jpg"
+                                                alt="Soy Lino">
                                         </div>
                                         <div class="card-content">
-                                            <h4>Angelo Cullanco</h4>
+                                            <h4>Soy Lino</h4>
                                             <span class="role">Motorizado</span>
                                         </div>
                                     </div>
@@ -276,24 +279,24 @@
                                 <div class="col-md-4 mb-4 d-none d-md-block">
                                     <div class="team-card">
                                         <div class="img-wrapper">
-                                            <img src="https://i.pinimg.com/1200x/38/54/00/3854000d6fdd66deef88f662d68015d9.jpg"
-                                                alt="Walter Cullanco">
+                                            <img src="https://i.pinimg.com/736x/68/35/f0/6835f07d2209679f3200c76586bcbb7a.jpg"
+                                                alt="Chan-Eque">
                                         </div>
                                         <div class="card-content">
-                                            <h4>Walter Cullanco</h4>
-                                            <span class="role">Motorizado</span>
+                                            <h4>Chan-Eque</h4>
+                                            <span class="role">Dueño</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-4 d-none d-lg-block">
                                     <div class="team-card">
                                         <div class="img-wrapper">
-                                            <img src="https://www.shutterstock.com/image-photo/portrait-smiling-banker-crossed-arms-600nw-2561900345.jpg"
-                                                alt="Maycol Garcia">
+                                            <img src="https://i.pinimg.com/736x/3d/ed/df/3deddf55957163361fa4913828dfa209.jpg"
+                                                alt="SeungMin">
                                         </div>
                                         <div class="card-content">
-                                            <h4>Maycol Garcia</h4>
-                                            <span class="role">Motorizado</span>
+                                            <h4>Kim Seung-min</h4>
+                                            <span class="role">CEO</span>
                                         </div>
                                     </div>
                                 </div>
@@ -515,7 +518,7 @@
 
                 <div class="text-center mb-5">
                     <h2 class="fw-bold display-6">Trabajamos con las mejores marcas</h2>
-                    <div class="mx-auto bg-white rounded" style="width: 80px; height: 4px;"></div>
+                    <div class="title-underline" style="width: 80px; height: 4px;"></div>
                 </div>
 
                 <div class="slider-infinito">
@@ -846,7 +849,7 @@
             </div>
         </section>
 
-        <section class="contacto py-5 color-primario" id="#contactanos">
+        <section class="contacto py-5 color-primario" id="contactanos">
             <div class="container text-white">
                 <div class="text-center mb-5">
                     <h2 class="fw-bold display-6">Contáctanos</h2>
@@ -861,9 +864,9 @@
                         <div class="mb-4">
                             <h4>teléfonos:</h4>
                             <ul class="list-unstyled fs-5 ps-2">
-                                <div class="mb-2"><i class="bi bi-telephone-fill me-2"> 999 888 777</i></div>
-                                <div class="mb-2"><i class="bi bi-telephone-fill me-2"> 999 888 777</i></div>
-                                <div class="mb-2"><i class="bi bi-telephone-fill me-2"> 999 888 777</i></div>
+                                <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> 999 888 777</li>
+                                <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> 999 888 777</li>
+                                <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> 999 888 777</li>
                             </ul>
                         </div>
                         <div class="mt-4">
@@ -884,9 +887,9 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="telefono" class="form-label fw-bold fs-5">Teléfono:</label>
-                                <input type="tel" class="form-control form-control-lg rounded-3" id="telefono"
-                                    placeholder="Tu teléfono...">
+                                <label for="direccion" class="form-label fw-bold fs-5">Dirección:</label>
+                                <input type="text" class="form-control form-control-lg rounded-3" id="direccion"
+                                    placeholder="Tu dirección...">
                             </div>
 
                             <div class="mb-4">
@@ -1010,15 +1013,15 @@
     <script>
         function enviarWhatsApp() {
             var nombre = document.getElementById("nombre").value;
-            var telefono = document.getElementById("telefono").value;
+            var direccion = document.getElementById("direccion").value;
             var mensaje = document.getElementById("mensaje").value;
 
-            if (nombre === "" || telefono === "") {
-                alert("Por favor, completa tu nombre y teléfono.");
+            if (nombre === "" || direccion === "") {
+                alert("Por favor, completa tu nombre y dirección.");
                 return;
             }
 
-            var texto = "Hola Diego Gas, soy " + nombre + ". Mi teléfono es " + telefono + ". " + mensaje;
+            var texto = "Hola Diego Gas, soy " + nombre + ". Mi Dirección es " + direccion + ". " + mensaje;
 
             var textoCodificado = encodeURIComponent(texto);
 
