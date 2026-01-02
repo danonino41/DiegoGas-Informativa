@@ -16,8 +16,7 @@
 <body>
     <header class="fixed-top">
         <div class="datos">
-            <div class="item-datos marquee-content"
-                style="display: flex; padding: 10px; justify-content: center; color: white; gap: 40px; white-space: nowrap;">
+            <div class="item-datos marquee-content">
                 <p class="mb-0"><i class="bi bi-clock"></i> Atención de 6am a 10pm</p>
                 <p class="mb-0">|</p>
                 <p class="mb-0"><i class="bi bi-truck"></i> Delivery Rápido y Seguro</p>
@@ -209,20 +208,43 @@
             </div>
         </section>
 
-        <section class="nosotros" id="nosotros">
-            <div class="nosotros-container">
-                <img src="img/imagenNosotros.png" alt="Distribución de gas a domicilio">
-                <div class="contenido2">
-                    <h2>¿Quiénes Somos?</h2>
-                    <div class="link-offset-1"></div>
-                    <p>En “Diego Gas”, todo empezó con una idea clara: llevar energía segura y confiable a cada hogar.
-                        Desde nuestros primeros pasos en Independencia, Lima, hemos crecido junto a nuestra comunidad,
-                        ofreciendo más que solo gas—ofrecemos confianza, atención personalizada y soluciones para tu
-                        cocina y tu día a día.
-                        Hoy, seguimos encendidos por el mismo compromiso que nos impulsó desde el inicio.</p>
-                    <p>👉<strong><a href="">[Saber más]</a></strong> Descubre nuestra historia completa, visión y
-                        misión, principios y valores, política
-                        de calidad y el compromiso que nos mueve.</p>
+        <section class="nosotros py-5" id="nosotros">
+            <div class="container">
+
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-6 position-relative">
+                        <div class="marco-azul"></div>
+
+                        <img src="img/imagenNosotros.png" alt="Equipo Diego Gas"
+                            class="img-fluid rounded shadow-lg position-relative z-1">
+                    </div>
+
+                    <div class="col-lg-6 contenido-nosotros">
+                        <span class="text-primary fw-bold text-uppercase ls-1 small">Nuestra Historia</span>
+
+                        <h2 class="fw-bold display-5 text-dark mt-2 mb-3">
+                            Llevando <span class="text-primary">energía segura</span> a cada hogar
+                        </h2>
+
+                        <div class="linea-azul mb-4"></div>
+
+                        <p class="lead text-secondary">
+                            En “Diego Gas”, todo empezó con una idea clara: confianza y seguridad desde Independencia
+                            para todo Lima.
+                        </p>
+
+                        <p class="text-muted mb-4">
+                            Hemos crecido junto a nuestra comunidad, ofreciendo más que solo gas: ofrecemos soluciones
+                            para tu cocina y tu día a día. Hoy, seguimos encendidos por el mismo compromiso que nos
+                            impulsó desde el inicio.
+                        </p>
+
+                        <a href="#" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold">
+                            Conoce más sobre nosotros <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -571,8 +593,8 @@
             </div>
         </section>
 
-        <section class="promocion py-5" id="promocion">
-            <div class="container">
+        <section>
+            <div class="container p-5">
 
                 <div class="text-center mb-5">
                     <h2 class="display-5 fw-bold text-dark">Promociones Vigentes</h2>
@@ -614,13 +636,90 @@
         </section>
 
         <section class="servicios-tecnicos py-5 color-primario" id="servicios-tecnicos">
-            <div class="container">
+            <div class="container text-white">
+
                 <div class="text-center mb-5">
-                    <h2 class="fw-bold display-6 color-blanco">Nuestros Servicios Tecnicos</h2>
+                    <h2 class="fw-bold display-6">Nuestros Servicios Técnicos</h2>
                     <div class="title-underline"></div>
+                    <div class="mt-3 text-white-50">
+                        <p class="fs-5">En Diego Gas contamos con un equipo altamente capacitado para brindarte
+                            soluciones rápidas, seguras y eficientes.</p>
+                    </div>
                 </div>
+
+                <div class="row align-items-center mb-5">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="https://elgasnoticias.com/wp-content/uploads/2017/10/Reparto-de-gas.jpeg"
+                            class="img-fluid rounded-4 shadow" alt="Instalaciones de Gas">
+                    </div>
+                    <div class="col-lg-6 ps-lg-5">
+                        <div class="icon-box mb-3 text-warning">
+                            <i class="bi bi-tools fs-1"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3">1. Instalaciones de gas</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> Instalación de
+                                gas natural a balón certificada.</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> Conexiones en
+                                tubería de cobre (Balones 45kg).</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> Instalaciones
+                                comerciales (Restaurantes, hornos).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5">
+                    <div class="col-lg-6 pe-lg-5 order-2 order-lg-1">
+                        <div class="icon-box mb-3 text-warning">
+                            <i class="bi bi-speedometer2 fs-1"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3">2. Mantenimiento y reparaciones</h3>
+
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> Reparación de
+                                cocinas domésticas y comerciales.</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> Cambio de
+                                válvulas y mangueras certificadas.</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> Reparación de
+                                artefactos a gas:</li>
+                            <ul class="list-unstyled ms-4 text-white-50">
+                                <li>• Cocinas</li>
+                                <li>• Termas</li>
+                                <li>• Hornos industriales</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 mb-4 mb-lg-0 order-1 order-lg-2">
+                        <img src="https://www.desdeadentro.pe/wp-content/uploads/2022/01/gas-natural.jpg"
+                            class="img-fluid rounded-4 shadow" alt="Mantenimiento">
+                    </div>
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="https://www.divetis.es/wp-content/uploads/2024/01/Seguridad-en-el-uso-de-gas-en-la-industria.jpg"
+                            class="img-fluid rounded-4 shadow" alt="Seguridad">
+                    </div>
+                    <div class="col-lg-6 ps-lg-5">
+                        <div class="icon-box mb-3 text-warning">
+                            <i class="bi bi-shield-check fs-1"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3">3. Asesoría en seguridad</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> Evaluación
+                                técnica de instalaciones.</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> Prevención de
+                                fugas y accidentes.</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> Cumplimiento de
+                                normas de seguridad vigentes.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
+
+        <section></section>
     </main>
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>

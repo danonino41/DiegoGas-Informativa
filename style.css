@@ -4,11 +4,15 @@ body {
   margin: 0;
 }
 
+section {
+  scroll-margin-top: 110px;
+}
+
 .color-primario {
   background-color: #004481;
 }
 
-.color-blanco{
+.color-blanco {
   color: white;
 }
 
@@ -168,6 +172,14 @@ header .datos {
   filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.3));
 }
 
+header .datos .item-datos {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  color: white;
+  gap: 40px;
+  white-space: nowrap;
+}
 
 /* Responsive navbar */
 @media (max-width: 1180px) {
@@ -358,7 +370,7 @@ header .datos {
     max-width: 200px;
   }
 
-  .porque-elegirnos{
+  .porque-elegirnos {
     padding: 1px;
   }
 
@@ -379,104 +391,63 @@ header .datos {
   }
 }
 
-
-.nosotros-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Sección Nosotros */
+.nosotros {
+  background-color: #fff;
+  /* Fondo blanco limpio */
+  overflow: hidden;
+  /* Evita que decoraciones se salgan */
 }
 
-.nosotros-container img {
-  width: 50%;
-  height: 650px;
-  object-fit: cover;
-  min-height: 100vh;
+/* Espaciado de letras pequeño para subtítulos */
+.ls-1 {
+  letter-spacing: 2px;
 }
 
-.contenido2 {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 0 50px;
+/* Línea azul decorativa debajo del título */
+.linea-azul {
+  width: 60px;
+  height: 4px;
+  background-color: #003b73;
+  /* Tu azul primario */
+  border-radius: 2px;
 }
 
-.contenido2 h2 {
-  font-size: 42px;
-  font-weight: 700;
+/* Efecto visual: Cuadro azul detrás de la imagen */
+.marco-azul {
+  position: absolute;
+  top: -15px;
+  /* Se mueve un poco arriba */
+  left: -15px;
+  /* Se mueve un poco a la izquierda */
+  width: 100%;
+  height: 100%;
+  border: 3px solid #003b73;
+  border-radius: 10px;
+  z-index: 0;
+  /* Se queda atrás */
+  opacity: 0.2;
+  /* Transparente para no molestar */
 }
 
-.contenido2 p {
-  max-width: 650px;
-  font-size: 25px;
-}
-
-.contenido2 a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 900px) {
-  .nosotros-container {
-    flex-direction: column;
-  }
-
-  .nosotros-container img,
-  .contenido2 {
-    width: 100%;
-  }
-
-  .contenido2 h2 {
-    font-size: 32px;
-  }
-
-  .contenido2 p {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 1180px) {
-  .nosotros-container img {
-    height: 400px;
-  }
-
-  .contenido2 {
-    padding: 20px;
-  }
-
-  .contenido2 h2 {
-    font-size: 28px;
+/* Ajustes de texto para móvil */
+@media (max-width: 991px) {
+  .nosotros {
     text-align: center;
+    /* Centrar texto en celular */
   }
 
-  .contenido2 p {
-    text-align: center;
-    font-size: 15px;
-    max-width: 100%;
+  .linea-azul {
+    margin: 0 auto 1.5rem auto;
+    /* Centrar la línea en celular */
+  }
+
+  .marco-azul {
+    display: none;
+    /* Ocultar el marco en celular para simplificar */
   }
 }
 
-@media (max-width: 480px) {
-  .nosotros-container img {
-    height: 250px;
-  }
-
-  .nosotros-container{
-    flex-direction: column-reverse;
-  }
-
-  .contenido2 {
-    padding: 15px;
-  }
-
-  .contenido2 h2 {
-    font-size: 24px;
-  }
-
-  .contenido2 p {
-    font-size: 18px;
-    line-height: 1.5;
-  }
-}
 
 
 /* ===== SECCIÓN FONDO AZUL ===== */
