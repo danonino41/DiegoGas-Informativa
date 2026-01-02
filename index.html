@@ -907,31 +907,121 @@
         </section>
     </main>
 
-    <footer>
-        
-    </footer>
+    <footer class="text-white pt-5 pb-4" style="background-color: #002855;">
+        <div class="container text-center text-md-start">
 
+            <div class="row text-center text-md-start">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Diego Gas</h5>
+                    <p>Llevando energía y confianza a tu hogar. Somos tu mejor aliado en distribución de gas en Lima
+                        Norte.</p>
+
+                    <div class="mb-4 mt-4">
+                        <h6 class="text-uppercase fw-bold mb-3">Síguenos:</h6>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 rounded-circle" role="button"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 rounded-circle" role="button"><i
+                                class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 rounded-circle" role="button"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating m-1 rounded-circle" role="button"><i
+                                class="bi bi-tiktok"></i></a>
+                    </div>
+
+                    <div class="mt-4">
+                        <h6 class="text-uppercase fw-bold small">Aceptamos:</h6>
+                        <div class="d-flex gap-2 justify-content-center justify-content-md-end fs-4 text-white-50">
+                            <i class="bi bi-credit-card-2-front" title="Tarjetas"></i>
+                            <i class="bi bi-cash-coin" title="Efectivo"></i>
+                            <i class="bi bi-phone" title="Yape/Plin"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Contáctanos</h5>
+
+                    <p><i class="bi bi-geo-alt-fill me-2 text-warning"></i> Jr. 28 de Julio 317, Independencia</p>
+                    <p><i class="bi bi-envelope-fill me-2 text-warning"></i> consultas@diegogas.com</p>
+                    <p><i class="bi bi-telephone-fill me-2 text-warning"></i> 999 888 777</p>
+                    <p><i class="bi bi-whatsapp me-2 text-warning"></i> 924 484 038</p>
+
+                    <hr class="d-md-none bg-light">
+                    <p class="small mt-3 text-white-50">
+                        <i class="bi bi-clock me-1"></i> Atención: Lun-Dom (incluidos feriados) <br>
+                        6:00 am - 10:00 pm
+                    </p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Empresa</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none hover-link">Historia</a>
+                        </li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none hover-link">Visión y
+                                Misión</a></li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none hover-link">Valores</a>
+                        </li>
+                        <li class="mb-2"><a href="#!" class="text-white text-decoration-none hover-link">Política de
+                                Calidad</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Promociones</h5>
+                    <p class="small">Suscríbete para recibir descuentos exclusivos en tu primera compra.</p>
+
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" class="form-control form-control-sm rounded-pill"
+                                placeholder="Tu correo electrónico">
+                        </div>
+                        <button type="button"
+                            class="btn btn-warning btn-sm w-100 rounded-pill fw-bold">Suscribirme</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <hr class="mb-4 mt-4 bg-light opacity-25">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="small mb-0">
+                        © 2024 <strong>Diego Gas</strong>. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <p class="small mb-0 text-md-end text-white-50">
+                        Diseñado para la seguridad de tu hogar.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    function enviarWhatsApp() {
-        var nombre = document.getElementById("nombre").value;
-        var telefono = document.getElementById("telefono").value;
-        var mensaje = document.getElementById("mensaje").value;
+        function enviarWhatsApp() {
+            var nombre = document.getElementById("nombre").value;
+            var telefono = document.getElementById("telefono").value;
+            var mensaje = document.getElementById("mensaje").value;
 
-        if(nombre === "" || telefono === "") {
-            alert("Por favor, completa tu nombre y teléfono.");
-            return;
+            if (nombre === "" || telefono === "") {
+                alert("Por favor, completa tu nombre y teléfono.");
+                return;
+            }
+
+            var texto = "Hola Diego Gas, soy " + nombre + ". Mi teléfono es " + telefono + ". " + mensaje;
+
+            var textoCodificado = encodeURIComponent(texto);
+
+            var numeroWhatsApp = "51924484038";
+
+            window.open("https://wa.me/" + numeroWhatsApp + "?text=" + textoCodificado, "_blank");
         }
-
-        var texto = "Hola Diego Gas, soy " + nombre + ". Mi teléfono es " + telefono + ". " + mensaje;
-
-        var textoCodificado = encodeURIComponent(texto);
-
-        var numeroWhatsApp = "51924484038"; 
-
-        window.open("https://wa.me/" + numeroWhatsApp + "?text=" + textoCodificado, "_blank");
-    }
-</script>
+    </script>
 </body>
 
 </html>
