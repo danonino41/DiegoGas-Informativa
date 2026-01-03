@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -86,31 +86,45 @@
 
     <main>
         <section>
-            <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-diegogas" data-bs-touch="false">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-diegogas"
+                data-bs-ride="carousel">
+
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/imagen1.png" class="d-block w-100">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="img/imagen1.png" class="d-block w-100" alt="Gas a domicilio">
                     </div>
-                    <div class="carousel-item">
-                        <img src="img/imagen2.png" class="d-block w-100">
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="img/imagen2.png" class="d-block w-100" alt="Entrega rápida">
                     </div>
-                    <div class="carousel-item">
-                        <img src="img/imagen3.png" class="d-block w-100">
-                    </div>
-                </div>
-
-                <div class="carousel-overlay">
-                    <h3>
-                        Distribuidora de gas a domicilio rápida, <br>
-                        segura y confiable
-                    </h3>
-
-                    <div class="carousel-buttons">
-                        <a href="#nosotros" class="btn btn-success">Sobre Nosotros</a>
-                        <a href="#productos" class="btn btn-outline-light">Ver productos</a>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="img/imagen3.png" class="d-block w-100" alt="Seguridad y confianza">
                     </div>
                 </div>
 
+                <div
+                    class="carousel-overlay container-fluid d-flex flex-column justify-content-center align-items-center text-center">
+
+                    <div class="col-12 col-md-8">
+                        <h1 class="display-4 fw-bold text-white mb-3 hero-title">
+                            Distribuidora de gas a domicilio
+                            <span class="text-warning d-block">rápida, segura y confiable</span>
+                        </h1>
+
+                        <p class="lead text-white-50 mb-4 d-none d-sm-block">
+                            Llevamos la mejor energía a la puerta de tu hogar.
+                        </p>
+
+                        <div class="carousel-buttons d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="#contactanos" class="btn btn-warning btn-lg fw-bold shadow-sm">
+                                <i class="bi bi-fire"></i> ¡Pide tu Gas!
+                            </a>
+                            <a href="#nosotros" class="btn btn-outline-light btn-lg fw-bold">
+                                Sobre Nosotros
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -373,85 +387,625 @@
 
         <section class="nuestros-productos py-5 bg-light" id="nuestros-productos">
             <div class="container">
+
                 <div class="text-center mb-5">
                     <h2 class="display-5 fw-bold text-dark">Nuestros Productos</h2>
-                    <div class="d-inline-block bg-primary rounded" style="width: 80px; height: 4px;"></div>
-                    <p class="text-muted mt-2">Calidad y peso exacto garantizado</p>
+                    <div class="d-inline-block bg-warning rounded" style="width: 80px; height: 4px;"></div>
+                    <p class="text-muted mt-2">Selecciona una categoría para ver los productos</p>
                 </div>
 
-                <h3 class="h4 mb-4 text-secondary border-start border-4 border-primary ps-2">Balones de Gas</h3>
+                <ul class="nav nav-pills nav-fill mb-4 gap-2 p-1 bg-white rounded shadow-sm" id="mainTab"
+                    role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active fw-bold" id="gas-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-gas" type="button" role="tab" aria-selected="true">
+                            <i class="bi bi-fire"></i> BALONES DE GAS
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link fw-bold" id="accesorios-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-accesorios" type="button" role="tab" aria-selected="false">
+                            <i class="bi bi-tools"></i> ACCESORIOS Y REPUESTOS
+                        </button>
+                    </li>
+                </ul>
 
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mb-5">
-
-                    <div class="col">
-                        <div class="card h-100 shadow-sm border-0 hover-effect">
-                            <img src="https://gas-del-sur.com/wp-content/uploads/2023/04/b.jpg" class="card-img-top p-3"
-                                alt="Balón de 5 kilos">
-                            <div class="card-body text-center d-flex flex-column">
-                                <h5 class="card-title fw-bold">Balón 5kg</h5>
-                                <p class="card-text text-muted small">Ideal para espacios pequeños.</p>
-                                <button class="btn btn-outline-primary mt-auto rounded-pill">Ver detalle</button>
-                            </div>
+                <div class="tab-content" id="mainTabContent">
+                    <div class="tab-pane fade show active" id="pills-gas" role="tabpanel">
+                        <div class="d-flex overflow-auto mb-4 pb-2 border-bottom">
+                            <ul class="nav nav-tabs flex-nowrap" id="marcasTab" role="tablist" style="min-width: 100%;">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active text-nowrap" data-bs-toggle="tab"
+                                        data-bs-target="#marca-solgas" type="button">Solgas</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link text-nowrap" data-bs-toggle="tab"
+                                        data-bs-target="#marca-llamagas" type="button">Llamagas</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link text-nowrap" data-bs-toggle="tab"
+                                        data-bs-target="#marca-zetagas" type="button">ZetaGas</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link text-nowrap" data-bs-toggle="tab"
+                                        data-bs-target="#marca-costagas" type="button">Costagas</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link text-nowrap" data-bs-toggle="tab"
+                                        data-bs-target="#marca-alfagas" type="button">Alfagas</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link text-nowrap" data-bs-toggle="tab"
+                                        data-bs-target="#marca-multigas" type="button">Multigas</button>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
 
-                    <div class="col">
-                        <div class="card h-100 shadow-sm border-0 hover-effect">
-                            <img src="https://gas-del-sur.com/wp-content/uploads/2023/04/b.jpg" class="card-img-top p-3"
-                                alt="Balón de 10 kilos">
-                            <div class="card-body text-center d-flex flex-column">
-                                <h5 class="card-title fw-bold">Balón 10kg</h5>
-                                <p class="card-text text-muted small">El estándar para el hogar.</p>
-                                <button class="btn btn-outline-primary mt-auto rounded-pill">Ver detalle</button>
-                            </div>
-                        </div>
-                    </div>
+                        <div class="tab-content">
 
-                    <div class="col">
-                        <div class="card h-100 shadow-sm border-0 hover-effect">
-                            <img src="https://gas-del-sur.com/wp-content/uploads/2023/04/b.jpg" class="card-img-top p-3"
-                                alt="Balón de 15 kilos">
-                            <div class="card-body text-center d-flex flex-column">
-                                <h5 class="card-title fw-bold">Balón 15kg</h5>
-                                <p class="card-text text-muted small">Mayor duración para familias.</p>
-                                <button class="btn btn-outline-primary mt-auto rounded-pill">Ver detalle</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 shadow-sm border-0 hover-effect">
-                            <img src="https://gas-del-sur.com/wp-content/uploads/2023/04/b.jpg" class="card-img-top p-3"
-                                alt="Balón de 45 kilos">
-                            <div class="card-body text-center d-flex flex-column">
-                                <h5 class="card-title fw-bold">Balón 45kg</h5>
-                                <p class="card-text text-muted small">Uso industrial o comercial.</p>
-                                <button class="btn btn-outline-primary mt-auto rounded-pill">Ver detalle</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h3 class="h4 mb-4 text-secondary border-start border-4 border-warning ps-2">Accesorios y Repuestos</h3>
-
-                <div class="row justify-content-center">
-                    <div class="col-md-10 col-lg-8">
-                        <div class="card shadow border-0 overflow-hidden">
-                            <div class="row g-0 align-items-center">
-                                <div class="col-md-5">
-                                    <img src="https://tuvalrep.com.co/wp-content/uploads/2024/10/Gas-Pe-al-Pe-Banner-Amarillo.webp"
-                                        class="img-fluid h-100 w-100 object-fit-cover" alt="Accesorios de gas">
-                                </div>
-                                <div class="col-md-7">
-                                    <div class="card-body p-4">
-                                        <h4 class="card-title fw-bold">Kit de Instalación Completo</h4>
-                                        <p class="card-text">Mangueras reforzadas, válvulas premium y abrazaderas de
-                                            alta seguridad. Todo lo que necesitas para una instalación segura.</p>
-                                        <a href="#" class="btn btn-warning text-dark fw-bold">Ver catálogo de
-                                            accesorios</a>
+                            <div class="tab-pane fade show active" id="marca-solgas">
+                                <div class="row row-cols-2 row-cols-lg-4 g-3 g-md-4">
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i5.walmartimages.com/asr/25276919-6349-439d-aab4-cf0b6822afe7.18d94c61024dd9a8289db2305036268d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+                                                class="card-img-top p-4" alt="Solgas 5kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">5 Kg</h5>
+                                                <p class="small text-muted">Ideal camping / espacios pequeños</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://gas-del-sur.com/wp-content/uploads/2023/04/b.jpg"
+                                                class="card-img-top p-4" alt="Solgas 10kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">10 Kg</h5>
+                                                <p class="small text-muted">Uso doméstico estándar</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-warning w-100 rounded-pill fw-bold">Pedir Ahora</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i0.wp.com/distribuidoraelrapido.pe/wp-content/uploads/2025/06/progas-15-kilos.jpg?fit=1200%2C1200&ssl=1"
+                                                class="card-img-top p-4" alt="Solgas 15kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">15 Kg</h5>
+                                                <p class="small text-muted">Para familias numerosas</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i0.wp.com/distribuidoraelrapido.pe/wp-content/uploads/2025/07/solgsas-45-kg.jpg?fit=1200%2C1200&ssl=1"
+                                                class="card-img-top p-4" alt="Solgas 45kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">45 Kg</h5>
+                                                <p class="small text-muted">Industrial / Restaurantes</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="tab-pane fade" id="marca-llamagas">
+                                <div class="row row-cols-2 row-cols-lg-4 g-3 g-md-4">
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i5.walmartimages.com/asr/25276919-6349-439d-aab4-cf0b6822afe7.18d94c61024dd9a8289db2305036268d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+                                                class="card-img-top p-4" alt="Solgas 5kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">5 Kg</h5>
+                                                <p class="small text-muted">Ideal camping / espacios pequeños</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://gas-del-sur.com/wp-content/uploads/2023/04/b.jpg"
+                                                class="card-img-top p-4" alt="Solgas 10kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">10 Kg</h5>
+                                                <p class="small text-muted">Uso doméstico estándar</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-warning w-100 rounded-pill fw-bold">Pedir Ahora</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i0.wp.com/distribuidoraelrapido.pe/wp-content/uploads/2025/06/progas-15-kilos.jpg?fit=1200%2C1200&ssl=1"
+                                                class="card-img-top p-4" alt="Solgas 15kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">15 Kg</h5>
+                                                <p class="small text-muted">Para familias numerosas</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i0.wp.com/distribuidoraelrapido.pe/wp-content/uploads/2025/07/solgsas-45-kg.jpg?fit=1200%2C1200&ssl=1"
+                                                class="card-img-top p-4" alt="Solgas 45kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">45 Kg</h5>
+                                                <p class="small text-muted">Industrial / Restaurantes</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="marca-zetagas">
+                                <div class="row row-cols-2 row-cols-lg-4 g-3 g-md-4">
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i5.walmartimages.com/asr/25276919-6349-439d-aab4-cf0b6822afe7.18d94c61024dd9a8289db2305036268d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+                                                class="card-img-top p-4" alt="Solgas 5kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">5 Kg</h5>
+                                                <p class="small text-muted">Ideal camping / espacios pequeños</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://gas-del-sur.com/wp-content/uploads/2023/04/b.jpg"
+                                                class="card-img-top p-4" alt="Solgas 10kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">10 Kg</h5>
+                                                <p class="small text-muted">Uso doméstico estándar</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-warning w-100 rounded-pill fw-bold">Pedir Ahora</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i0.wp.com/distribuidoraelrapido.pe/wp-content/uploads/2025/06/progas-15-kilos.jpg?fit=1200%2C1200&ssl=1"
+                                                class="card-img-top p-4" alt="Solgas 15kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">15 Kg</h5>
+                                                <p class="small text-muted">Para familias numerosas</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i0.wp.com/distribuidoraelrapido.pe/wp-content/uploads/2025/07/solgsas-45-kg.jpg?fit=1200%2C1200&ssl=1"
+                                                class="card-img-top p-4" alt="Solgas 45kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">45 Kg</h5>
+                                                <p class="small text-muted">Industrial / Restaurantes</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="marca-costagas">
+                                <div class="row row-cols-2 row-cols-lg-4 g-3 g-md-4">
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i5.walmartimages.com/asr/25276919-6349-439d-aab4-cf0b6822afe7.18d94c61024dd9a8289db2305036268d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+                                                class="card-img-top p-4" alt="Solgas 5kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">5 Kg</h5>
+                                                <p class="small text-muted">Ideal camping / espacios pequeños</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://gas-del-sur.com/wp-content/uploads/2023/04/b.jpg"
+                                                class="card-img-top p-4" alt="Solgas 10kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">10 Kg</h5>
+                                                <p class="small text-muted">Uso doméstico estándar</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-warning w-100 rounded-pill fw-bold">Pedir Ahora</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i0.wp.com/distribuidoraelrapido.pe/wp-content/uploads/2025/06/progas-15-kilos.jpg?fit=1200%2C1200&ssl=1"
+                                                class="card-img-top p-4" alt="Solgas 15kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">15 Kg</h5>
+                                                <p class="small text-muted">Para familias numerosas</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i0.wp.com/distribuidoraelrapido.pe/wp-content/uploads/2025/07/solgsas-45-kg.jpg?fit=1200%2C1200&ssl=1"
+                                                class="card-img-top p-4" alt="Solgas 45kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">45 Kg</h5>
+                                                <p class="small text-muted">Industrial / Restaurantes</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="marca-alfagas">
+                                <div class="row row-cols-2 row-cols-lg-4 g-3 g-md-4">
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i5.walmartimages.com/asr/25276919-6349-439d-aab4-cf0b6822afe7.18d94c61024dd9a8289db2305036268d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+                                                class="card-img-top p-4" alt="Solgas 5kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">5 Kg</h5>
+                                                <p class="small text-muted">Ideal camping / espacios pequeños</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://gas-del-sur.com/wp-content/uploads/2023/04/b.jpg"
+                                                class="card-img-top p-4" alt="Solgas 10kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">10 Kg</h5>
+                                                <p class="small text-muted">Uso doméstico estándar</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-warning w-100 rounded-pill fw-bold">Pedir Ahora</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i0.wp.com/distribuidoraelrapido.pe/wp-content/uploads/2025/06/progas-15-kilos.jpg?fit=1200%2C1200&ssl=1"
+                                                class="card-img-top p-4" alt="Solgas 15kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">15 Kg</h5>
+                                                <p class="small text-muted">Para familias numerosas</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i0.wp.com/distribuidoraelrapido.pe/wp-content/uploads/2025/07/solgsas-45-kg.jpg?fit=1200%2C1200&ssl=1"
+                                                class="card-img-top p-4" alt="Solgas 45kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">45 Kg</h5>
+                                                <p class="small text-muted">Industrial / Restaurantes</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="marca-multigas">
+                                <div class="row row-cols-2 row-cols-lg-4 g-3 g-md-4">
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i5.walmartimages.com/asr/25276919-6349-439d-aab4-cf0b6822afe7.18d94c61024dd9a8289db2305036268d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+                                                class="card-img-top p-4" alt="Solgas 5kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">5 Kg</h5>
+                                                <p class="small text-muted">Ideal camping / espacios pequeños</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://gas-del-sur.com/wp-content/uploads/2023/04/b.jpg"
+                                                class="card-img-top p-4" alt="Solgas 10kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">10 Kg</h5>
+                                                <p class="small text-muted">Uso doméstico estándar</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-warning w-100 rounded-pill fw-bold">Pedir Ahora</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i0.wp.com/distribuidoraelrapido.pe/wp-content/uploads/2025/06/progas-15-kilos.jpg?fit=1200%2C1200&ssl=1"
+                                                class="card-img-top p-4" alt="Solgas 15kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">15 Kg</h5>
+                                                <p class="small text-muted">Para familias numerosas</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-0 shadow-sm hover-up">
+                                            <div class="badge bg-primary position-absolute top-0 end-0 m-2">Solgas</div>
+                                            <img src="https://i0.wp.com/distribuidoraelrapido.pe/wp-content/uploads/2025/07/solgsas-45-kg.jpg?fit=1200%2C1200&ssl=1"
+                                                class="card-img-top p-4" alt="Solgas 45kg">
+                                            <div class="card-body text-center">
+                                                <h5 class="fw-bold">45 Kg</h5>
+                                                <p class="small text-muted">Industrial / Restaurantes</p>
+                                                <a href="#contactanos"
+                                                    class="btn btn-sm btn-outline-dark w-100 rounded-pill">Pedir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-accesorios" role="tabpanel">
+
+                        <h4 class="mb-3 border-start border-4 border-warning ps-2 mt-4">Válvulas (Reguladores)</h4>
+                        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+
+                            <div class="col">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-header bg-white fw-bold text-center">NORMAL</div>
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                Marca Surge
+                                                <span class="badge bg-secondary rounded-pill">Stock</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                Marca Solgas
+                                                <span class="badge bg-primary rounded-pill">Stock</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-header bg-info fw-bold text-center">PREMIUM</div>
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                Marca Surge
+                                                <span class="badge bg-secondary rounded-pill">Stock</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                Marca Solgas
+                                                <span class="badge bg-primary rounded-pill">Stock</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-header bg-warning text-dark fw-bold text-center">INDUSTRIAL</div>
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                Marca Surge
+                                                <span class="badge bg-secondary rounded-pill">Stock</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                Marca Solgas
+                                                <span class="badge bg-primary rounded-pill">Stock</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <h4 class="mb-3 border-start border-4 border-warning ps-2">Mangueras y Otros</h4>
+                        <div class="row row-cols-2 row-cols-md-4 g-4">
+
+                            <div class="col">
+                                <div class="card h-100 text-center border-0 shadow-sm hover-up pt-3">
+                                    <div class="d-flex align-items-center justify-content-center mx-auto mb-2"
+                                        style="height: 100px; width: 100px;">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWKhFZlsgTOowE3v_3r0d5HeCDJEXyn37gqA&s"
+                                            alt="Abrazadera Surge" class="img-fluid"
+                                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                                    </div>
+
+                                    <div class="card-body d-flex flex-column p-3">
+                                        <h6 class="fw-bold text-dark mb-1">Manguera Naranja</h6>
+                                        <p class="small text-muted mb-3">Uso Doméstico</p>
+
+                                        <span class="badge bg-light text-dark border mt-auto">
+                                            <i class="bi bi-tag-fill text-warning me-1"></i> G&M Mangueras
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100 text-center border-0 shadow-sm hover-up pt-3">
+                                    <div class="d-flex align-items-center justify-content-center mx-auto mb-2"
+                                        style="height: 100px; width: 100px;">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpSiLVaJ4CUcVIRBYGPwYIq586xRxPle8Y3A&s"
+                                            alt="Abrazadera Surge" class="img-fluid"
+                                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                                    </div>
+
+                                    <div class="card-body d-flex flex-column p-3">
+                                        <h6 class="fw-bold text-dark mb-1">Manguera Negra</h6>
+                                        <p class="small text-muted mb-3">Alta Presión</p>
+
+                                        <span class="badge bg-light text-dark border mt-auto">
+                                            <i class="bi bi-tag-fill text-warning me-1"></i> G&M Mangueras
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100 text-center border-0 shadow-sm hover-up pt-3">
+                                    <div class="d-flex align-items-center justify-content-center mx-auto mb-2"
+                                        style="height: 100px; width: 100px;">
+                                        <img src="https://elcaribe.pe/4184-large_default/manguera-de-gas-negro-1-4-400-psi-80-metros.jpg"
+                                            alt="Abrazadera Surge" class="img-fluid"
+                                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                                    </div>
+
+                                    <div class="card-body d-flex flex-column p-3">
+                                        <h6 class="fw-bold text-dark mb-1">Naranja Rayada</h6>
+                                        <p class="small text-muted mb-3">Premium Reforzada</p>
+
+                                        <span class="badge bg-light text-dark border mt-auto">
+                                            <i class="bi bi-tag-fill text-warning me-1"></i> G&M Mangueras
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100 text-center border-0 shadow-sm hover-up pt-3">
+                                    <div class="d-flex align-items-center justify-content-center mx-auto mb-2"
+                                        style="height: 100px; width: 100px;">
+                                        <img src="https://fertec.com.pe/wp-content/uploads/2018/12/Abrazadera-Sin-Fin-1%E2%80%B3-Zincada-Ajustable.webp"
+                                            alt="Abrazadera Surge" class="img-fluid"
+                                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                                    </div>
+
+                                    <div class="card-body d-flex flex-column p-3">
+                                        <h6 class="fw-bold text-dark mb-1">Abrazadera</h6>
+                                        <p class="small text-muted mb-3">Ajuste de seguridad</p>
+
+                                        <span class="badge bg-light text-dark border mt-auto">
+                                            <i class="bi bi-tag-fill text-warning me-1"></i> Marca Surge
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100 text-center border-0 shadow-sm hover-up pt-3">
+                                    <div class="position-absolute top-0 start-0 m-2 badge bg-danger rounded-pill">
+                                        ¡Promo!</div>
+
+                                    <div class="d-flex align-items-center justify-content-center mx-auto mb-2"
+                                        style="height: 100px; width: 100px;">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5umpqNz6xpzJYGaoed-ERP19UquzV7zMx-w&s"
+                                            alt="Kit Doméstico" class="img-fluid"
+                                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                                    </div>
+
+                                    <div class="card-body d-flex flex-column p-3">
+                                        <h6 class="fw-bold text-dark mb-1">Kit Doméstico</h6>
+                                        <p class="small text-muted mb-3">Válvula Normal + Manguera Naranja (1.5m) + Abrazaderas
+                                        </p>
+                                        <span class="badge bg-light text-dark border mt-auto">
+                                            <i class="bi bi-tag-fill text-warning me-1"></i> Marca Surge
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100 text-center border-0 shadow-sm hover-up pt-3">
+                                    <div class="position-absolute top-0 start-0 m-2 badge bg-danger rounded-pill">
+                                        ¡Promo!</div>
+
+                                    <div class="d-flex align-items-center justify-content-center mx-auto mb-2"
+                                        style="height: 100px; width: 100px;">
+                                        <img src="https://zonahogarperu.com/cdn/shop/files/valvula-reguladora-alta-presion-cocina-semi-industrial-zona-hogar.png?v=1749141509"
+                                            alt="Kit Industrial" class="img-fluid"
+                                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                                    </div>
+
+                                    <div class="card-body d-flex flex-column p-3">
+                                        <h6 class="fw-bold text-dark mb-1">Kit Industrial</h6>
+                                        <p class="small text-muted mb-3">Válvula Industrial + Manguera Negra Alta
+                                            Presión (1.5m)</p>
+                                        <span class="badge bg-light text-dark border mt-auto">
+                                            <i class="bi bi-tag-fill text-warning me-1"></i> Marca Surge
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card h-100 text-center border-0 shadow-sm hover-up pt-3">
+                                    <div class="position-absolute top-0 start-0 m-2 badge bg-danger rounded-pill">
+                                        ¡Promo!</div>
+
+                                    <div class="d-flex align-items-center justify-content-center mx-auto mb-2"
+                                        style="height: 100px; width: 100px;">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUqjg4VY-mfzYL9ZQcAKexXYAPM2aaEs9taQ&s"
+                                            alt="Kit Premium" class="img-fluid"
+                                            style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                                    </div>
+
+                                    <div class="card-body d-flex flex-column p-3">
+                                        <h6 class="fw-bold text-dark mb-1">Kit Premium</h6>
+                                        <p class="small text-muted mb-3">Válvula Premium + Manguera Reforzada (1.5m)
+                                        </p>
+                                        <span class="badge bg-light text-dark border mt-auto">
+                                            <i class="bi bi-tag-fill text-warning me-1"></i> Marca Solgas
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -613,6 +1167,7 @@
 
             </div>
         </section>
+
         <section>
             <div class="container p-5">
 
@@ -876,12 +1431,12 @@
                         <div class="mb-4">
                             <h4>teléfonos:</h4>
                             <ul class="list-unstyled fs-5 ps-2">
-                                <li c +51lass="mb-2"><i class="bi bi-telephone-fill me-2"></i>+51 999 888 777</li>
-                                <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> 999 888 777</li>
-                                <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> 999 888 777</li>
+                                <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> +51 999 888 777</li>
+                                <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> +51 999 888 777</li>
+                                <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> +51 999 888 777</li>
                             </ul>
                         </div>
-                        <div class="mt-4">
+                        <div class="map-responsive mt-4">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d243.92194822363743!2d-77.04963671223523!3d-11.99171192333159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1767332097960!5m2!1ses-419!2spe"
                                 width="600" height="250" style="border-radius: 5px; border: 5px solid black;"
@@ -907,7 +1462,7 @@
                             <div class="mb-4">
                                 <label for="mensaje" class="form-label fw-bold fs-5">Mensaje:</label>
                                 <textarea class="form-control form-control-lg rounded-3" id="mensaje" rows="4"
-                                    placeholder="Escriba un mensaje.."></textarea>
+                                    placeholder="Deseo un hacer un pedido de..."></textarea>
                             </div>
 
                             <button type="button" onclick="enviarWhatsApp()"
@@ -1066,13 +1621,13 @@
         }
 
         // DUPLICAR LAS PROMO DEL HEADER
-        document.addEventListener("DOMContentLoaded", function() {
-        const trackGas = document.getElementById('trackGas');
-        
-        if (trackGas) {
-            trackGas.innerHTML += trackGas.innerHTML;
-        }
-    });
+        document.addEventListener("DOMContentLoaded", function () {
+            const trackGas = document.getElementById('trackGas');
+
+            if (trackGas) {
+                trackGas.innerHTML += trackGas.innerHTML;
+            }
+        });
     </script>
 </body>
 
