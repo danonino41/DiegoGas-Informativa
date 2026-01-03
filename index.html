@@ -15,15 +15,25 @@
 
 <body>
     <header class="fixed-top">
-        <div class="datos">
-            <div class="item-datos marquee-content">
-                <p class="mb-0"><i class="bi bi-clock"></i> Atención de 6am a 10pm</p>
-                <p class="mb-0">|</p>
-                <p class="mb-0"><i class="bi bi-truck"></i> Delivery Rápido y Seguro</p>
-                <p class="mb-0">|</p>
-                <p class="mb-0"><i class="bi bi-whatsapp"></i> Pedidos al 924 484 038</p>
-                <p class="mb-0">|</p>
-                <p class="mb-0"><i class="bi bi-clock"></i> Atención de 6am a 10pm</p>
+        <div class="diegogas-marquee">
+            <div class="diegogas-track" id="trackGas">
+
+                <div class="diegogas-item">
+                    <i class="bi bi-clock-fill"></i> Atención de 6am a 10pm
+                </div>
+
+                <div class="diegogas-item">
+                    <i class="bi bi-truck-front-fill"></i> Delivery Rápido y Seguro
+                </div>
+
+                <div class="diegogas-item">
+                    <i class="bi bi-whatsapp"></i> Pedidos al 924 484 038
+                </div>
+
+                <div class="diegogas-item">
+                    <i class="bi bi-fire"></i> ¡Gas al toque!
+                </div>
+
             </div>
         </div>
 
@@ -44,7 +54,7 @@
 
                     <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#nosotros">Sobre Nosotros</a>
+                            <a class="nav-link" href="#nosotros">Nuestra Historia</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#nuestro-equipo">Nuestro Equipo</a>
@@ -73,6 +83,7 @@
             </div>
         </nav>
     </header>
+
     <main>
         <section>
             <div id="carouselExampleFade" class="carousel slide carousel-fade carousel-diegogas" data-bs-touch="false">
@@ -224,7 +235,8 @@
                     </div>
 
                     <div class="col-lg-6 contenido-nosotros">
-                        <span class="fw-bold text-uppercase ls-1 small" style="color: #003b73;">Nuestra Historia</span>
+                        <span class="fw-bold text-uppercase ls-1 small" style="color: rgb(184, 142, 35);">Nuestra
+                            Historia</span>
 
                         <h2 class="fw-bold display-5 text-dark mt-2 mb-3">
                             Llevando <span style="color: rgb(255, 183, 0);">energía segura</span> a cada hogar
@@ -864,7 +876,7 @@
                         <div class="mb-4">
                             <h4>teléfonos:</h4>
                             <ul class="list-unstyled fs-5 ps-2">
-                                <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> 999 888 777</li>
+                                <li c +51lass="mb-2"><i class="bi bi-telephone-fill me-2"></i>+51 999 888 777</li>
                                 <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> 999 888 777</li>
                                 <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> 999 888 777</li>
                             </ul>
@@ -952,8 +964,8 @@
 
                     <p><i class="bi bi-geo-alt-fill me-2 text-warning"></i> Jr. 28 de Julio 317, Independencia</p>
                     <p><i class="bi bi-envelope-fill me-2 text-warning"></i> consultas@diegogas.com</p>
-                    <p><i class="bi bi-telephone-fill me-2 text-warning"></i> 999 888 777</p>
-                    <p><i class="bi bi-whatsapp me-2 text-warning"></i> 924 484 038</p>
+                    <p><i class="bi bi-telephone-fill me-2 text-warning"></i> +51 999 888 777</p>
+                    <p><i class="bi bi-whatsapp me-2 text-warning"></i> +51 999 888 777</p>
 
                     <hr class="d-md-none bg-light">
                     <p class="small mt-3 text-white-50">
@@ -977,16 +989,25 @@
                 </div>
 
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Promociones</h5>
-                    <p class="small">Suscríbete para recibir descuentos exclusivos en tu primera compra.</p>
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Promociones VIP</h5>
+                    <p class="small text-white-50">Déjanos tus datos para agregarte a WhatsApp y enviarte ofertas
+                        exclusivas.</p>
 
-                    <form>
-                        <div class="mb-3">
-                            <input type="email" class="form-control form-control-sm rounded-pill"
-                                placeholder="Tu correo electrónico">
+                    <form id="promoForm" onsubmit="enviarAWhatsAppPromo(event)">
+
+                        <div class="mb-2">
+                            <input type="text" id="clienteNombre" class="form-control form-control-sm rounded-pill"
+                                placeholder="Tu Nombre" required>
                         </div>
-                        <button type="button"
-                            class="btn btn-warning btn-sm w-100 rounded-pill fw-bold">Suscribirme</button>
+
+                        <div class="mb-3">
+                            <input type="text" id="clienteDireccion" class="form-control form-control-sm rounded-pill"
+                                placeholder="Tu Dirección" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-warning btn-sm w-100 rounded-pill fw-bold shadow-sm">
+                            <i class="bi bi-whatsapp me-1"></i> Suscribirme
+                        </button>
                     </form>
                 </div>
 
@@ -1029,6 +1050,29 @@
 
             window.open("https://wa.me/" + numeroWhatsApp + "?text=" + textoCodificado, "_blank");
         }
+
+        function enviarAWhatsAppPromo(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById('clienteNombre').value;
+            const direccion = document.getElementById('clienteDireccion').value;
+
+            const numeroDiegoGas = "51999999999";
+
+            const mensaje = `Hola DiegoGas, soy *${nombre}* y vivo en *${direccion}*. Quiero que me agreguen a su lista de contactos para ver las promociones.`;
+
+            const url = `https://wa.me/${numeroDiegoGas}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+
+        // DUPLICAR LAS PROMO DEL HEADER
+        document.addEventListener("DOMContentLoaded", function() {
+        const trackGas = document.getElementById('trackGas');
+        
+        if (trackGas) {
+            trackGas.innerHTML += trackGas.innerHTML;
+        }
+    });
     </script>
 </body>
 
