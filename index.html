@@ -1722,6 +1722,27 @@
                 trackGas.innerHTML += trackGas.innerHTML;
             }
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var linksMenu = document.querySelectorAll('#navbarSupportedContent a');
+
+            var menuColapsable = document.getElementById('navbarSupportedContent');
+
+            linksMenu.forEach(function (enlace) {
+                enlace.addEventListener('click', function () {
+
+                    if (menuColapsable.classList.contains('show')) {
+
+                        var bsCollapse = bootstrap.Collapse.getInstance(menuColapsable);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
+                        }
+                    }
+                });
+            });
+
+        });
     </script>
 </body>
 
