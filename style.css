@@ -338,7 +338,6 @@ header .datos .item-datos {
     height: 70vh;
   }
 
-  /* Opcional para centrar la info*/
   .carousel-overlay {
     padding-top: 98.8px;
   }
@@ -352,6 +351,32 @@ header .datos .item-datos {
     font-size: 0.9rem;
     padding: 8px 16px;
     min-width: 120px;
+  }
+
+  /* POR QUE ELEGIRNOS */
+
+  .carousel-item .item {
+    max-width: 200px;
+  }
+
+  .porque-elegirnos {
+    padding: 1px;
+  }
+
+  .porque-elegirnos h2 {
+    font-size: 20px;
+  }
+
+  .porque-elegirnos .item i {
+    font-size: 45px;
+  }
+
+  .porque-elegirnos .item p {
+    font-size: 16px;
+  }
+
+  .porque-elegirnos .item span {
+    font-size: 13px;
   }
 }
 
@@ -413,90 +438,48 @@ header .datos .item-datos {
   }
 }
 
-@media (max-width: 450px) {
-  .carousel-item .item {
-    max-width: 200px;
-  }
-
-  .porque-elegirnos {
-    padding: 1px;
-  }
-
-  .porque-elegirnos h2 {
-    font-size: 20px;
-  }
-
-  .porque-elegirnos .item i {
-    font-size: 45px;
-  }
-
-  .porque-elegirnos .item p {
-    font-size: 16px;
-  }
-
-  .porque-elegirnos .item span {
-    font-size: 13px;
-  }
-}
-
 /* Sección Nosotros */
 .nosotros {
   background-color: #fff;
-  /* Fondo blanco limpio */
   overflow: hidden;
-  /* Evita que decoraciones se salgan */
 }
 
-/* Espaciado de letras pequeño para subtítulos */
 .ls-1 {
   letter-spacing: 2px;
 }
 
-/* Línea azul decorativa debajo del título */
 .linea-azul {
   width: 60px;
   height: 4px;
   background-color: #003b73;
-  /* Tu azul primario */
   border-radius: 2px;
 }
 
-/* Efecto visual: Cuadro azul detrás de la imagen */
 .marco-azul {
   position: absolute;
   top: -15px;
-  /* Se mueve un poco arriba */
   left: -15px;
-  /* Se mueve un poco a la izquierda */
   width: 100%;
   height: 100%;
   border: 3px solid #003b73;
   border-radius: 10px;
   z-index: 0;
-  /* Se queda atrás */
   opacity: 0.2;
-  /* Transparente para no molestar */
 }
 
-/* Ajustes de texto para móvil */
 @media (max-width: 991px) {
   .nosotros {
     text-align: center;
-    /* Centrar texto en celular */
   }
 
   .linea-azul {
     margin: 0 auto 1.5rem auto;
-    /* Centrar la línea en celular */
   }
 
   .marco-azul {
     display: none;
-    /* Ocultar el marco en celular para simplificar */
   }
 }
-
-
 
 /* ===== SECCIÓN FONDO AZUL ===== */
 .nuestro-equipo {
